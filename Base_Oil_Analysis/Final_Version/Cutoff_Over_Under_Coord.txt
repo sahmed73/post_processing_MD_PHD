@@ -1,0 +1,9 @@
+cutoff: 0.3, over_coordination: 3685, under_coordination: 2190859
+cutoff: 0.35, over_coordination: 2908, under_coordination: 2192261
+cutoff: 0.4, over_coordination: 2454, under_coordination: 2193772
+cutoff: 0.45, over_coordination: 2215, under_coordination: 2195358
+cutoff: 0.5, over_coordination: 2045, under_coordination: 2197620
+cutoff: 0.55, over_coordination: 1897, under_coordination: 2200808
+cutoff: 0.6, over_coordination: 1725, under_coordination: 2206603
+cutoff: 0.65, over_coordination: 1492, under_coordination: 2220369
+cutoff: 0.7, over_coordination: 1198, under_coordination: 2264689

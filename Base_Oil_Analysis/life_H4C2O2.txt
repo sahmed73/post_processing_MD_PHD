@@ -1,0 +1,10 @@
+# Pathway tracker for H4C2O2 in PAO4 oxidation, Bond order cutoff: 0.45
+species,life(starting_frame,ending_frame),atom_contributuin
+H62C30,2074 (0,2074), {8: 'H62C30'}
+O2,2355 (0,2355), {179: 'O2'}
+H40C20,169 (2116,2285), {8: 'H40C20'}
+H4C2O,2910 (2390,5300), {8: 'H4C2', 179: 'O'}
+H2O,2840 (2460,5300), {17: 'H', 8: 'H', 179: 'O'}
+# Total count:5
+######
+
