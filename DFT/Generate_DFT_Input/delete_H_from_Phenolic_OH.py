@@ -10,6 +10,7 @@ import networkx as nx
 import matplotlib.pyplot as plt
 import magnolia.molecular_analysis as man
 import magnolia.MD_Converter as mdc
+import os
 
 
 # Example function to get covalent radius (can be replaced with a custom table)
@@ -40,8 +41,12 @@ def calculate_bonds(atoms, coordinates, tolerance=0.2):
     return bonds
 
 # Main
-dirr=r'C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\REACTER\PAOr+Antioixdants\set001\A0004\DataFile\Single_Molecules'
-xyzfile=dirr+r'\A0004_pre.xyz'
+dirr=r'C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\GAUSSIAN\OPT\JOB-0002_A1-A5_OPT+Freq\A0004'
+xyzfile=dirr+r'\pre\A0004_optimized_pre.xyz'
+
+which=1
+os.makedirs(dirr+f'\\post{which}')
+outfile=dirr+rf'\post{which}\A0004_un-optimized_post{which}.xyz'
 
 symbols, coordinates = read_xyz(xyzfile)
 bonds = calculate_bonds(symbols, coordinates)
@@ -71,9 +76,6 @@ for oxygen in phenolic_oxygens:
         if symbols[child] == 'H':
             delete_atoms.append(child)
             break
-
-which=1
-outfile=dirr+rf'\A0002_post.xyz'
 
 updated_symbols = []
 updated_coordinates = []

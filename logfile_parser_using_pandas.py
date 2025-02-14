@@ -14,12 +14,12 @@ plt.style.use('default')
 plt.rcParams['font.size']=18
 
 
-dirr = r"C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\REACTER\PAOr+Antioixdants\set001\A0003\Eq\Sim-10_Interaction_Energy+MSD" #Sim-9_Interaction_Energy"
+dirr = r"C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\REACTER\PAOr+Antioixdants\set001\A0004\Eq\Sim-1_Interaction_Energy+MSD"
 filename = r'\log.lammps'
 
 logfile = dirr+filename
 
-thermo = lfp.thermo_panda(logfile, serial='all')
+thermo = lfp.thermo_panda(logfile, serial=3)
 
 prop_1 = 'Time'
 prop_2 = 'Density'#'c_PAO_AO_interaction'
@@ -36,5 +36,3 @@ plt.xlabel(f'{ne.getlab(prop_1)}')
 plt.ylabel(f'{ne.getlab(prop_2)}')
 # plt.xlabel('Time (ns)')
 # plt.ylabel('Number of reactions')
-mplt.saveplot(folder='thermoplot',name='thermo')
-# print('Final Density:',thermo['Density'].iloc[-1])
