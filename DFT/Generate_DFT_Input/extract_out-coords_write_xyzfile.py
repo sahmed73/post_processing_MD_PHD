@@ -12,9 +12,9 @@ from mpl_toolkits.mplot3d import Axes3D
 import numpy as np
 
 ## user input
-dirr=r'C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\GAUSSIAN\OPT\JOB-0002_A1-A5_OPT+Freq\A0005\post2'
+dirr=r'C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\GAUSSIAN\OPT\DPPH_Radical\pre'
 
-optfile=dirr+r'\gaussian_opt.out'
+optfile=dirr+r'\opt_input.out'
 df=dft.extract_optimized_coordinates(optfile)
 
 positions=df[['X','Y','Z']]

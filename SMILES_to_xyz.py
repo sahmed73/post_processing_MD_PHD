@@ -35,10 +35,10 @@ def smiles_to_xyz(smiles, name, filename):
 if __name__ == "__main__":
     print("Usage: python script.py molecule_name SMILES")
 
-    name = 'BHT'
-    smiles = 'Cc1cc(C(C)(C)C)c(O)c(C(C)(C)C)c1'
+    name = 'DPPH_Radical'
+    smiles = 'C1=CC=C(C=C1)[N+](=NC2=C(C=C(C=C2[N+](=O)[O-])[N+](=O)[O-])[N+](=O)[O-])C3=CC=CC=C3'
     
-    dirr = r"C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\REACTER\Try_From_Scratch\Single_Molecules"
+    dirr = r"C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\GAUSSIAN\OPT\DPPH Radical\pre"
     filename = f"\\{name}.xyz"
     smiles_to_xyz(smiles, name, dirr+filename)
     print(f"XYZ file '{name}.xyz' generated successfully!")

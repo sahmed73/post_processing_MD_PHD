@@ -196,7 +196,12 @@ indecies = [11,14,9,10,10]
 gammas = []
 for i, AO in enumerate(AOs):
     
-    ao_file = rf"C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\GAUSSIAN\OPT\JOB-0002_A1-A5_OPT+Freq\{AO}\pre\{AO}_pre.xyz"    # Provide the actual file path
+    if AO in ['A0004', 'A0005']:
+        ext = '_optimized_pre'
+    else:
+        ext = '_pre'
+        
+    ao_file = rf"C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\GAUSSIAN\OPT\JOB-0002_A1-A5_OPT+Freq\{AO}\pre\{AO}{ext}.xyz"    # Provide the actual file path
     
     pao_atom_idx = 51       # Change as per your system
     ao_atom_idx = indecies[i]        # Change as per your system
@@ -225,5 +230,5 @@ for i, AO in enumerate(AOs):
     ax.set_title(AO)
     
 fig,ax=plt.subplots(dpi=500)
-ax.bar(AOs, gammas, color='tab:green')
+ax.bar(AOs, gammas, color=['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple'])
 ax.set_ylabel('Coefficient of steric hindrance')

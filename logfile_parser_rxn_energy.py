@@ -11,12 +11,12 @@ plt.style.use('default')
 plt.rcParams['font.size']=18
 
 
-dirr = r"C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\REACTER\PAOr+Antioixdants\set001\A0003\Reaction\Sim-6_TSD=1.90"
+dirr = r"C:\Users\arup2\OneDrive - University of California Merced\Desktop\LAMMPS\borgstore\REACTER\PAOr+Antioixdants\set001\A0001\Reaction\TSD=2.5\Sim-1"
 filename = r'\log.lammps'
 
 logfile = dirr+filename
 
-thermo = lfp.thermo_panda(logfile, serial='all')
+thermo = lfp.thermo_panda(logfile, serial=':')
 
 prop_1 = 'Time'
 prop_2 = 'PotEng'

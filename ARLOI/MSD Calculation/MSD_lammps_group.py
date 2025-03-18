@@ -12,8 +12,13 @@ from scipy.stats import linregress
 timestep = 1.0  # fs
 fs_to_ps = 0.1   # 1 fs = 0.1 ps
 
-AOs = ['A0001', 'A0003']
-folders = ['Sim-4_Interaction_Energy+MSD', 'Sim-10_Interaction_Energy+MSD']
+AOs = ['A0001', 'A0002', 'A0003', 'A0004', 'A0005']
+folders = ["Sim-4_Interaction_Energy+MSD",
+           "Sim-1_Interaction_Energy+MSD",
+           "Sim-10_Interaction_Energy+MSD",
+           "Sim-1_Interaction_Energy+MSD",
+           "Sim-1_Interaction_Energy+MSD"]
+
 diffusivities = []
 
 fig, ax = plt.subplots(dpi=350)
@@ -56,10 +61,7 @@ plt.legend()
 plt.show()
 
 # Plot bar chart for diffusivities
-colors = ['tab:blue', 'tab:orange']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple']
 fig, ax = plt.subplots(dpi=350)
 ax.bar(AOs, diffusivities, width=0.7, color=colors)
 ax.set_ylabel("Diffusivity ($Å^2/ps$)")
-plt.show()
-
-
